@@ -1,0 +1,16 @@
+<!-- side bar partial -->
+<div class="side_bar" id="side_bar">
+
+<ul>
+  <% side_bar_links = sitemap.resources.select{|resource| resource.data.title}.to_a %>
+  <% side_bar_links.sort!{|a,b| a.data.lesson_number.to_i <=> b.data.lesson_number.to_i} %>
+  <% side_bar_links.each do |resource| %>
+    <li>
+      <%= link_to resource.data.title, resource, :relative => true %>
+    </li>
+  <% end %>
+</ul>
+
+</div>
+
+<!-- end side bar partial -->

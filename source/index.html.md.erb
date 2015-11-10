@@ -1,0 +1,32 @@
+;;;
+"title":"PhysicsHacker.com"
+;;;
+
+
+Physics Programming Labs with Processing
+========================================
+
+
+These labs were designed by Prof. Chris Orban for Physics 1250 at OSU Marion and they should be generally useful for advanced high school and introductory college level. No calculus knowledge or prior programming experience is assumed.
+
+
+These programming labs use a very nice programming framework called [processing.org](http://processing.org/) which is very similar to C/C++. There is also a convenient way to run these simulations using a web browser called [processing.js](http://processingjs.org/)
+
+
+Step 0. If you are *not* using a computer that already has the processing.org
+ environemnt installed, then follow the link below and choose windows 64-bit if 
+you are using windows (and make sure to click "Extract" if asked), or Mac OSX if you are using a Mac. 
+
+
+[Click here](https://processing.org/download/?processing) to install the processing.org environment if you are using a computer that does not yet have it installed
+
+
+If you are using a computer that already has the processing.org framework installed please continue:
+
+<% side_bar_links = sitemap.resources.select{|resource| resource.data.lesson_number}.to_a %>
+<% side_bar_links.sort!{|a,b| a.data.lesson_number.to_i <=> b.data.lesson_number.to_i} %>
+<% side_bar_links.each do |resource| %>
+  <li>
+    <%= link_to resource.data.title, resource, :relative => true %>
+  </li>
+<% end %>

@@ -53,6 +53,14 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :processing_dir, 'labs/processing'
+
+ignore 'labs/processing/*'
+
+after_build do
+  `cp -R source/labs/processing build/labs`
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
