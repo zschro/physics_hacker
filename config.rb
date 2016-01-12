@@ -47,19 +47,11 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
 
-set :images_dir, 'images'
-
-set :processing_dir, 'labs/processing'
-
-ignore 'labs/processing/*'
-
-after_build do
-  `cp -R source/labs/processing build/labs`
-end
+set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
@@ -73,7 +65,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
